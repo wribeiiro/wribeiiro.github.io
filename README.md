@@ -4,6 +4,9 @@ A personal portfolio built as a Windows 98 desktop experience. Fully interactive
 
 **Live:** [https://wribeiiro.github.io](https://wribeiiro.github.io)
 
+<img width="1919" height="925" alt="image" src="https://github.com/user-attachments/assets/1368e9cb-a29c-4ac8-b099-3f5d0a63fd01" />
+
+
 ## Features
 
 - Windows 98 desktop environment with draggable/resizable windows
