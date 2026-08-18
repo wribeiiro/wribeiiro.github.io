@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Google</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 4px 8px;
+      font-size: 11px;
+      border-bottom: 1px solid #cccccc;
+      gap: 8px;
+    }
+    .topbar a { color: #000080; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+
+    /* Main content */
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 48px;
+    }
+
+    /* Logo */
+    .logo {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .logo-text {
+      font-size: 64px;
+      font-weight: bold;
+      letter-spacing: -2px;
+      line-height: 1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .logo-text .g1  { color: #3366cc; }
+    .logo-text .o1  { color: #cc0000; }
+    .logo-text .o2  { color: #ff9900; }
+    .logo-text .g2  { color: #3366cc; }
+    .logo-text .l   { color: #009933; }
+    .logo-text .e   { color: #cc0000; }
+
+    .logo-beta {
+      font-size: 10px;
+      color: #cc0000;
+      font-style: italic;
+      text-align: right;
+      margin-top: -4px;
+    }
+
+    /* Search form */
+    .search-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 22px;
+      border: 2px inset #c0c0c0;
+      padding: 2px 6px;
+      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: #3366cc;
+    }
+
+    .search-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn {
+      padding: 3px 10px;
+      background: #c0c0c0;
+      border: 2px outset #c0c0c0;
+      font-size: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: default;
+      color: #000;
+    }
+    .btn:active {
+      border: 2px inset #c0c0c0;
+    }
+
+    /* Search tip */
+    .search-tip {
+      font-size: 11px;
+      color: #444;
+      margin-top: 6px;
+    }
+    .search-tip a { color: #000080; }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      gap: 16px;
+      margin-top: 14px;
+      font-size: 12px;
+    }
+    .categories a {
+      color: #000080;
+      text-decoration: none;
+    }
+    .categories a:hover { text-decoration: underline; }
+
+    /* Divider */
+    hr {
+      width: 100%;
+      max-width: 540px;
+      border: none;
+      border-top: 1px solid #cccccc;
+      margin: 20px 0 10px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #444;
+    }
+    .footer a { color: #000080; }
+
+    /* Bottom links */
+    .bottom-links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 540px;
+      font-size: 11px;
+      padding: 0 8px;
+    }
+    .bottom-links a { color: #000080; text-decoration: none; }
+    .bottom-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="#" onclick="return false;">Web</a>
+    <a href="#" onclick="return false;">Images</a>
+    <a href="#" onclick="return false;">Groups</a>
+    <a href="#" onclick="return false;">Directory</a>
+  </div>
+
+  <div class="main">
+
+    <div class="logo">
+      <div class="logo-text">
+        <span class="g1">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span>
+      </div>
+      <div class="logo-beta">Beta</div>
+    </div>
+
+    <form class="search-form" onsubmit="doSearch(event)">
+      <input
+        type="text"
+        class="search-input"
+        id="q"
+        name="q"
+        autocomplete="off"
+        autofocus
+      />
+      <div class="search-buttons">
+        <button type="submit" class="btn">Google Search</button>
+        <button type="button" class="btn" onclick="doLucky()">I'm Feeling Lucky</button>
+      </div>
+    </form>
+
+    <div class="search-tip">
+      Search the web using Google!
+    </div>
+
+    <div class="categories">
+      <a href="#" onclick="return false;">Arts</a>
+      <a href="#" onclick="return false;">Business</a>
+      <a href="#" onclick="return false;">Computers</a>
+      <a href="#" onclick="return false;">Games</a>
+      <a href="#" onclick="return false;">News</a>
+      <a href="#" onclick="return false;">Science</a>
+    </div>
+
+    <hr />
+
+    <div class="footer">
+      Google is not affiliated with the authors of this page<br />
+      nor responsible for its content.<br /><br />
+      &copy;2025 <a href="#" onclick="return false;">Google Inc.</a>
+    </div>
+
+    <br />
+
+    <div class="bottom-links">
+      <div>
+        <a href="#" onclick="return false;">Advertising Programs</a> -
+        <a href="#" onclick="return false;">Business Solutions</a> -
+        <a href="#" onclick="return false;">About Google</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function doSearch(e) {
+      e.preventDefault();
+      var q = document.getElementById('q').value.trim();
+      if (!q) return;
+      window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank', 'noopener,noreferrer');
+    }
+
+    function doLucky() {
+      var q = document.getElementById('q').value.trim();
+      if (!q) return;
+      window.open('https://www.google.com/search?q=' + encodeURIComponent(q) + '&btnI=I', '_blank', 'noopener,noreferrer');
+    }
+  </script>
+
+</body>
+</html>
