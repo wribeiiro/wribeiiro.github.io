@@ -125,14 +125,6 @@ const AboutWindow = ({ windowId, onClose }) => {
                       whiteSpace: 'nowrap'
                     }}
                   >
-                    <img
-                      src={skill.image}
-                      alt={skill.name}
-                      width={16}
-                      height={16}
-                      style={{ marginRight: '4px', verticalAlign: 'middle' }}
-                      onError={(e) => { e.target.style.display = 'none'; }}
-                    />
                     {skill.name}
                   </span>
                 ))}
