@@ -1,0 +1,80 @@
+/* Win98 Desktop Icons */
+.desktop-icons {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.desktop-icon {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  padding: 4px;
+  cursor: default;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: background-color 100ms;
+}
+
+.desktop-icon:hover {
+  background: rgba(0, 0, 128, 0.1);
+  border: 1px solid #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+}
+
+.desktop-icon.selected {
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.desktop-icon.selected .desktop-icon-image {
+  filter: brightness(0.4) sepia(1) hue-rotate(190deg) saturate(5);
+  opacity: 0.85;
+}
+
+.desktop-icon.selected .desktop-icon-label {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  background: #000080;
+  padding: 0 2px;
+}
+
+.desktop-icon-image {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.desktop-icon-label {
+  font-size: 8pt;
+  font-family: 'Microsoft Sans Serif', 'Tahoma', sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 72px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Selection rectangle */
+.desktop-selection {
+  position: absolute;
+  border: 1px dashed #000080;
+  background: rgba(0, 0, 128, 0.1);
+  pointer-events: none;
+  z-index: 10;
+}

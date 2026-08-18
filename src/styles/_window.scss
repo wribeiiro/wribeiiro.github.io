@@ -1,0 +1,175 @@
+/* Win98 Window Chrome */
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  box-shadow:
+    2px 2px 4px rgba(0,0,0,0.3),
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080;
+  min-width: 200px;
+  min-height: 150px;
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: var(--z-index, 100);
+}
+
+.window.inactive .window-titlebar {
+  background: #808080;
+  color: #c0c0c0;
+}
+
+.window.inactive .window-titlebar .window-title-icon {
+  filter: grayscale(1);
+}
+
+.window.inactive .window-control-btn {
+  background: #c0c0c0;
+  color: #808080;
+}
+
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 2px;
+  background: #000080;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 8pt;
+  cursor: default;
+  user-select: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.window-title-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.window-title-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.window-controls {
+  display: flex;
+  gap: 1px;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+.window-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  color: #000000;
+  font-size: 10px;
+  line-height: 1;
+  padding: 0;
+  cursor: default;
+  transition: none;
+}
+
+.window-control-btn:hover {
+  border: 1px inset #c0c0c0;
+}
+
+.window-control-btn:active {
+  border: 1px inset #808080;
+  background: #808080;
+  color: #ffffff;
+}
+
+.window-control-btn.close-btn:hover {
+  background: #ff0000;
+  color: #ffffff;
+  border: 1px outset #ff0000;
+}
+
+.window-control-btn.close-btn:active {
+  background: #cc0000;
+  border: 1px inset #cc0000;
+}
+
+.window-content {
+  flex: 1;
+  overflow: auto;
+  background: #ffffff;
+  border-bottom: 1px solid #808080;
+  padding: 8px;
+}
+
+.window-statusbar {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  padding: 0 4px;
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  font-size: 7pt;
+  color: #000000;
+}
+
+.window-statusbar .status-text {
+  flex: 1;
+}
+
+.window-statusbar .status-grip {
+  width: 16px;
+  height: 16px;
+  background:
+    linear-gradient(45deg, #ffffff 25%, transparent 25%),
+    linear-gradient(-45deg, #ffffff 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #808080 75%),
+    linear-gradient(-45deg, transparent 75%, #808080 75%);
+  background-size: 4px 4px;
+  background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+  cursor: se-resize;
+  flex-shrink: 0;
+}
+
+.window-resize-handle {
+  position: absolute;
+  background: transparent;
+  z-index: 10;
+}
+
+.window-resize-handle.se {
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  cursor: se-resize;
+}
+
+.window-resize-handle.s {
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 4px;
+  cursor: s-resize;
+}
+
+.window-resize-handle.e {
+  right: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  cursor: e-resize;
+}
+
+.window {
+  animation: none;
+}

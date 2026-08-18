@@ -1,0 +1,151 @@
+/* Win98 Start Menu */
+.start-menu {
+  position: fixed;
+  bottom: 28px;
+  left: 0;
+  min-width: 200px;
+  max-width: 300px;
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  z-index: 1001;
+  font-family: 'Microsoft Sans Serif', 'Tahoma', sans-serif;
+  font-size: 8pt;
+  user-select: none;
+}
+
+.start-menu-header {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: linear-gradient(180deg, #000080 0%, #0000a0 100%);
+  color: #ffffff;
+  border-bottom: 1px solid #808080;
+}
+
+.start-menu-header-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.start-menu-header-text {
+  font-weight: bold;
+}
+
+.start-menu-items {
+  padding: 2px;
+}
+
+.start-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: default;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.start-menu-item:hover {
+  background: #000080;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+}
+
+.start-menu-item:active {
+  background: #000060;
+  border: 1px inset #000080;
+}
+
+.start-menu-item-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.start-menu-item-text {
+  flex: 1;
+  text-align: left;
+}
+
+.start-menu-item-shortcut {
+  color: #808080;
+  font-size: 7pt;
+  margin-left: 8px;
+}
+
+.start-menu-item:hover .start-menu-item-shortcut {
+  color: #ffffff;
+}
+
+.start-menu-separator {
+  height: 1px;
+  background: #ffffff;
+  border-bottom: 1px solid #808080;
+  margin: 2px 4px;
+}
+
+.start-menu-submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 180px;
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  z-index: 1002;
+  padding: 2px;
+}
+
+.start-menu-arrow {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  transform: rotate(-45deg);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.start-menu-item:hover .start-menu-arrow {
+  border-color: #ffffff;
+}
+
+.start-menu-footer {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #808080;
+}
+
+.start-menu-footer-btn {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.start-menu-footer-btn:hover {
+  border: 1px inset #c0c0c0;
+}
+
+.start-menu-footer-btn:active {
+  border: 1px inset #808080;
+}
+
+.start-menu-footer-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}

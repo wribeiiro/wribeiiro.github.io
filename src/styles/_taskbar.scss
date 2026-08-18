@@ -1,0 +1,190 @@
+/* Win98 Taskbar */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  z-index: 1000;
+  font-family: 'Microsoft Sans Serif', 'Tahoma', sans-serif;
+  font-size: 8pt;
+}
+
+.taskbar-start-btn {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px 0 4px;
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  margin-right: 2px;
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.taskbar-start-btn:hover {
+  border: 2px inset #c0c0c0;
+}
+
+.taskbar-start-btn:active {
+  border: 2px inset #808080;
+}
+
+.taskbar-start-btn.active {
+  border: 2px inset #808080;
+  background: #b0b0b0;
+}
+
+.taskbar-start-btn .start-btn-text {
+  margin-left: 4px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.taskbar-start-btn .start-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.taskbar-tasks {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  height: 100%;
+  padding: 2px 2px;
+  gap: 2px;
+}
+
+.taskbar-task {
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 6px;
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  cursor: default;
+  user-select: none;
+  white-space: nowrap;
+  max-width: 160px;
+  min-width: 100px;
+  font-size: 8pt;
+  color: #000000;
+}
+
+.taskbar-task:hover {
+  background: #d4d0c8;
+}
+
+.taskbar-task.active {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #c0c0c0;
+  color: #000000;
+  padding-left: 8px;
+}
+
+.taskbar-task.active:hover {
+  background: #c0c0c0;
+}
+
+.taskbar-task.minimized {
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  background: #c0c0c0;
+  color: #000000;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+.taskbar-task.minimized .taskbar-task-text {
+  overflow: visible;
+}
+
+.taskbar-task-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.taskbar-task-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 2px;
+}
+
+.taskbar-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 24px;
+  padding: 0 8px;
+  background: #c0c0c0;
+  border: 1px inset #c0c0c0;
+  margin-left: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+.taskbar-time {
+  font-family: 'Terminal', 'Consolas', monospace;
+  font-size: 8pt;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1;
+}
+
+.taskbar-date {
+  font-size: 7pt;
+  color: #000000;
+  line-height: 1;
+}
+
+.taskbar-quick-launch {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin: 0 2px;
+}
+
+.taskbar-quick-launch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  margin-right: 1px;
+  cursor: default;
+  user-select: none;
+}
+
+.taskbar-quick-launch-btn:hover {
+  border: 1px inset #c0c0c0;
+}
+
+.taskbar-quick-launch-btn:active {
+  border: 1px inset #808080;
+}
+
+.taskbar-quick-launch-btn img {
+  width: 16px;
+  height: 16px;
+}

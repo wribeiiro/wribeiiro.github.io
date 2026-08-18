@@ -1,0 +1,53 @@
+@use "variables" as *;
+@forward "variables";
+@use "_reset";
+@use "_window";
+@use "_taskbar";
+@use "_start-menu";
+@use "_icons";
+@use "_components";
+
+.win98-app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #008080;
+  font-family: $font-ms-sans;
+  font-size: $font-normal;
+  color: $win98-black;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.border-outset {
+  border: 2px outset #c0c0c0;
+}
+
+.border-inset {
+  border: 2px inset #c0c0c0;
+}
+
+.border-raised {
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #808080;
+  border-right: 1px solid #808080;
+}
+
+.border-recessed {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}

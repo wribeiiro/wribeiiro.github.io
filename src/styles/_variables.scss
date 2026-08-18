@@ -1,0 +1,48 @@
+// Win98 Color Palette
+$win98-blue: #000080;
+$win98-blue-inactive: #808080;
+$win98-gray: #c0c0c0;
+$win98-white: #ffffff;
+$win98-dark-gray: #808080;
+$win98-black: #000000;
+$win98-border-light: #ffffff;
+$win98-border-dark: #808080;
+$win98-border-darker: #404040;
+$win98-title-font: #ffffff;
+$win98-title-font-inactive: #c0c0c0;
+$win98-desktop-bg: #008080; // Classic teal
+$win98-menu-bg: #c0c0c0;
+$win98-menu-hover: #000080;
+$win98-menu-hover-text: #ffffff;
+$win98-button-face: #c0c0c0;
+$win98-button-highlight: #ffffff;
+$win98-button-shadow: #808080;
+$win98-button-dark-shadow: #404040;
+$win98-input-bg: #ffffff;
+$win98-input-border-light: #ffffff;
+$win98-input-border-dark: #808080;
+$win98-scrollbar-bg: #c0c0c0;
+$win98-scrollbar-thumb: #808080;
+
+// Fonts
+$font-ms-sans: 'Microsoft Sans Serif', 'Tahoma', 'Segoe UI', sans-serif;
+$font-terminal: 'Terminal', 'Consolas', 'Monospace', monospace;
+$font-small: 8pt;
+$font-normal: 8pt;
+$font-title: 8pt;
+
+// Sizing
+$title-bar-height: 22px;
+$border-width: 2px;
+$icon-size: 32px;
+$icon-spacing: 16px;
+$taskbar-height: 28px;
+$start-button-width: 58px;
+
+// Z-index layers
+$z-index-desktop: 1;
+$z-index-window: 100;
+$z-index-taskbar: 1000;
+$z-index-start-menu: 1001;
+$z-index-modal: 2000;
+$z-index-tooltip: 3000;

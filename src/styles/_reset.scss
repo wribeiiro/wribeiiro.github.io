@@ -1,0 +1,77 @@
+/* Win98 Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Microsoft Sans Serif', 'Tahoma', 'Segoe UI', sans-serif;
+  font-size: 8pt;
+  line-height: 1.4;
+  color: #000000;
+  background-color: #008080;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: default;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background: #c0c0c0;
+}
+
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #808080;
+}
+
+::-webkit-scrollbar-button {
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar-button:hover {
+  border: 1px inset #c0c0c0;
+}
+
+::-webkit-scrollbar-corner {
+  background: #c0c0c0;
+}
+
+::selection {
+  background: #000080;
+  color: #ffffff;
+}
+
+*:focus-visible {
+  outline: 1px dotted #000000;
+  outline-offset: -1px;
+}
